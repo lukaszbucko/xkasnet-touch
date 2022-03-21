@@ -126,12 +126,14 @@
          name: ModemManager
          state: stopped
          enabled: no
+      ignore_errors: yes
          
     - name: chmod -x /usr/sbin/ModemManager
       file:
          path: /usr/sbin/ModemManager
          state: file
          mode: -x
+      ignore_errors: yes
  
     - name: 'add 10. to /etc/hosts.allow'
       lineinfile:
